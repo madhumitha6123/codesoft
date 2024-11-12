@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" >
+    <style>
+      
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(20, 19, 19);
+    font-family: Arial, sans-serif;
+    background-color: #000;
+  
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(90deg, #0d0d0e, #0d0e0d, #070707);
+    background-color: transparent;
+}
+.logo {
+    padding: 0 5rem;
+}
+.logo .logo-heading {
+    color: #f1e3e3;
+}
+.menu {
+    padding: 0 5rem;
+}
+.hamburger {
+    display: none;
+    color: #efe4e4;
+    font-size: 25px;
+}
+.cross-icon {
+    display: none;
+}
+.menu .menu-list {
+    display: flex;
+    list-style: none;
+}
+.menu-list .menu-list-items {
+    padding: 0.5rem 1rem;
+}
+@media screen and (min-width: 856px) and (max-width: 1024px) {
+    .menu-list .menu-list-items {
+        padding: 0.5rem 0.3rem;
+    }
+}
+
+.hero {
+    background-image: url('pexels-francesco-ungaro-2554092.jpg');
+    background-size: cover;
+     background-repeat: repeat;
+     background-size: 200% 200%;
+    width: 100%;
+    height: 120vh; 
+     display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 4.8rem 0; 
+
+}
+.hero .intro {
+    text-align: center;
+    margin: 0 5rem;
+}
+.hero .intro-buttons {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(45deg, #090909, #0c0c0c);
+    justify-content: space-between;
+    width: 100%;
+}
+.about .about-text {
+    width: 450px;
+    color: whitesmoke;
+    padding: 5rem 1rem 5rem 5rem;
+}
+.about .about-image img {
+    height: 600px;
+    width: 400px;
+    padding: 5rem 5rem 5rem 1rem;
+}
+
+.portfolio {
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
+.port-card {
+    padding: 0 !important;
+    background: none !important;
+    border: 2px solid #dad1d1;
+}
+.port-card .image {
+    width: 100%;
+}
+.port-card .image img {
+    height: 200px;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
+.my-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.my-row .my-col {
+    text-align: center;
+    width: 30%;
+}
+.my-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(#0d0d0d, #0d0d0d, #050505);
+    padding: 1rem;
+}
+.icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #363D73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon svg {
+    font-size: 30px;
+    color: #fff;
+}
+
+.contact {
+   
+    padding: 0 5rem;
+}
+.details{
+    color: #090909;
+}
+
+
+.contact-content {
+    display: flex;
+    margin: 3rem 0;
+    justify-content: space-between;
+    
+}
+.contact-form-container {
+    width: 50%;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form .form-controls {
+    width: 80%;
+    padding: 10px 0;
+    margin: 1.67rem 0;
+}
+.contact-form .form-btn {
+    width: 83%;
+}
+.contact-details {
+    width: 50%;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+}
+.footer-list-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 50%;
+    background-color: #53C8B6;
+}
+.footer-links {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-menu {
+    padding: 0 5rem;
+}
+.footer-menu .footer-menu-list {
+    display: flex;
+    list-style: none;
+}
+.headings{
+    text-align: center;
+}
+
+.greet-heading {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: #2794B3;
+    margin: 0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.my-heading {
+    font-size: 2.5rem;
+    margin: 0;
+    color: white;
+}
+.headiing{
+    color: white;
+}
+.sub-heading {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ccc;
+    font-weight: lighter;
+}
+.links:hover {
+    border-bottom: 2px solid #fff;
+}
+.links {
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: none;
+}
+.common-btn {
+    background-color: #35A99C;
+    color: #fff;
+    border: 2px solid #35A99C;
+    transition: all 0.25s;
+}
+.common-btn:hover {
+    background-color: #fff;
+    color: #35A99C;
+    border: 2px solid #35A99C;
+    outline: none;
+}
+.ghost-btn {
+    background-color: #fff;
+    color: #35A99C;
+    border: 2px solid #35A99C;
+    outline: none;
+}
+.ghost-btn:hover {
+    background-color: #35A99C;
+    color: #fff;
+    transition: all 0.25s;
+    border: 2px solid #35A99C;
+}
+.heading-span {
+    font-weight: bolder;
+}
+.text-center {
+    text-align: center;
+}
+.small-para {
+    font-size: 14px;
+    color: #f5e9e9;
+}
+.white-text {
+    color: #e1caca;
+}
+.blue-text {
+    color: #363D73;
+}
+
+.background {
+  background: url("banner.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  filter: brightness(0.5);
+  width: 100%;
+  height: 500px;
+}
+
+/* Contact */
+
+#contact {
+  position: relative;
+}
+
+.contact-form {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: var(--dark-100);
+  border-radius: 7px;
+  color: wheat;
+}
+
+.contact-form h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  background-color: transparent;
+  box-shadow: 1px 1px 10px rgba(157, 153, 153, 0.5);
+  border: 1px solid var(--dark-500);
+  border-radius: 5px;
+  color: rgb(230, 215, 215);
+}
+
+textarea {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--dark-500);
+}
+
+.form-group button {
+  padding: 10px;
+  color: rgb(107, 101, 101);
+  width: 100%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+}
+
+.form-group button:hover {
+  background-color: var(--dark-300);
+}
+.concat{
+    color: wheat;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+ 
+}
+
+
+/* Media Queries */
+@media (max-width: 720px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .contact-form {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 1360px) {
+  #home {
+    padding: 60px 0px;
+  }
+
+  .right {
+    display: none;
+  }
+  .left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    background: url(../images/project.jpg) no-repeat;
+    background-position: top;
+  }
+  .skills-section {
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+    color: #d53e3e;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: wheat;
+}
+
+.skill-bar {
+    width: 100%;
+    color: #e4d5d5;
+    border-radius: 10px;
+    margin: 0.8rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-label {
+    position: absolute;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+}
+
+.skill-level {
+    height: 40px;
+    background-color: #35A99C; /* Make sure this is a contrasting color */
+    border-radius: 10px;
+    text-align: right;
+    padding-right: 10px;
+    color: #fff;
+    line-height: 40px; /* Ensures the text aligns vertically within the bar */
+}
+
+
+
+  .content {
+    width: 60%;
+    align-items: center;
+    color: wheat;
+  }
+
+  .content p,
+  .content h2 {
+    text-align: center;
+  }
+  .header{
+    color: wheat;
+  }
+  *{box-sizing: border-box}
+  
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+.concat{
+    color: wheat;
+}
+
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="logo-heading">WELCOME TO MY PORTFOLIO</h2>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars hamburger-icon"></i>
+                <i class="fas fa-times cross-icon"></i>
+            </div>
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="menu-list-items">
+                        <a class="links" href="#home">
+                              Home
+                          </a>
+                    </li>
+                    
+                    <li class="menu-list-items">
+                        <a class="links" href="#about">
+                              About
+                          </a>
+                    </li>
+                    
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#contact">
+                              Contact Me
+                          </a>
+                    </li>
+                    <!-- <li class="menu-list-items">
+                        <a class="links" href="#Skills">
+                              Skills
+                          </a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+ 
+    <section id="home" class="hero">
+        <div class="intro">
+            <div class="headings">
+                <h3 class="greet-heading">Hello, I'm</h3>
+                <h1 class="my-heading">G.Madhumitha</h1>
+             <h4 class="headiing">                           
+                  I'M FRESHER
+                </h4>
+            </div>
+            <div class="intro-buttons">
+                <button class="btn common-btn">Hire Me</button>
+                   <a class="btn ghost-btn" href="Resume_12_11_2024_09_33_56_pm.pdf" aria-label="View Resume">View Resume
+                    </a>
+            </div>
+            </section>
+    <section id="about" class="about">
+        <div class="about-text">
+            <h1 class="my-heading">About Me</h1>
+            <p class="lead-para">
+                  Hi,i'm G.Madhumitha
+                    im pursuing (MCA) Master of Computer Applications in vivekanandha institute of information and management studies.
+                    I did my UG degree in Trinity arts and science college for women.
+                    Technical skils are WEB DESING,BLOCKCHAIN,HTML,CSS,SQL,JAVASCRIPT.
+                    My soft skills are observation,decision making,communication,Critical Thinking, Adaptable,Creative Desgining.and team work.
+                    My hobbies are agricultural forming work,cycling,drawing,mandala arts,cooking and travelling.
+            </p>
+            <h5>PROJECT:
+                     Online movie tickets booking system.
+                    </h5>
+                    <h5> frontend language :html,css,javascript</h5>
+              
+                     <h5>backend language :php,MYsql,Blockchain</h5>
+         
+            <h5>OBJECTIVE:</h5>
+            <p>
+                 To persue a challenge career and to be part of progressive organization that gives scope to enhance my knowledge skills and to reach the pinnacle in the programming and development field with sheer determination dedication and hardwork.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="IMG-20240906-WA0004.jpg" alt="About Image">
+        </div>
+    </section>
+    <!-- <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <h1 class="my-heading">Skills</h1>
+            <div class="skill-bar ">
+                <span class="skill-label">HTML</span>
+                <div class="skill-level" style="width: 90%;"></div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-label">CSS</span>
+                <div class="skill-level" style="width: 80%;"></div>
+            </div>
+            <div class="skill-bar ">
+                <span class="skill-label">JavaScript</span>
+                <div class="skill-level" style="width: 75%;"></div>
+            </div>
+            <div class="skill-bar ">
+                <span class="skill-label">SQL</span>
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+            <div class="skill-bar ">
+                <span class="skill-label">Blockchain</span>
+                <div class="skill-level" style="width: 65%;"></div>
+            </div>
+        </div>
+    </section> -->
+    
+       
+
+     <!-- <section class="contact" id="contact">
+        <div class="contact-heading">
+            <h1 class="my-heading text-center">Contact Me</h1>
+        </div>
+        <div class="contact-content">
+            <div class="contact-form-container">
+                <h1 class="greet-heading">Get In Touch</h1>
+                <form class="contact-form">
+                    <input class="form-controls" type="text" 
+                           placeholder="Your Name">
+                    <input class="form-controls" type="text" 
+                           placeholder="Your Email">
+                    <input class="form-controls" type="text" 
+                           placeholder="Your Phone">
+                    <textarea class="form-controls" 
+                              placeholder="Write your message" 
+                              name="message" id="" cols="30"
+                              rows="10">
+                      </textarea>
+                    <input class="form-btn btn common-btn" 
+                           type="submit" value="Send Message">
+                </form>
+            </div>
+            <div class="contact-details">
+                <h1 class="greet-heading">My Contact Details</h1>
+                <div class="details">
+                    <h5 class="contact-heading">EMAIL</h5>
+                    <p class="contact-text">mpnanthika01@gmail.com</p>
+                </div>  
+                
+                <div class="details">
+                    <h5 class="contact-heading">ADDRESS</h5>
+                    <p>Namakkal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        -->
+        
+        
+    
+        <section id="contact">
+            <div class="background"></div>
+            <div class="contact-form">
+                <h1>Contact Me</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            placeholder="Enter your message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+
+
+
+            <div class="social-links">
+                <div class="footer-menu">
+                    <ul class="footer-menu-list">
+                       
+                     
+                        <li class="footer-list-items">
+                            <a class="footer-links" href="https://github.com/madhumitha6123">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-items">
+                            <a class="footer-links" href="https://www.linkedin.com/in/madhumitha-g-867487301/?trk=opento_sprofile_pfeditor">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="concat"><h1>contact-</h1></div>
+                <div class="concat mee">
+                <h3>email:madhumithaganeshan1@gmail.com
+                    phone no:9872538173
+                    address:12 kk nagar ,chennai.
+                </h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+      </script>
+  
+</body>
+</html>
